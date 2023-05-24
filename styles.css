@@ -8,6 +8,7 @@
 }
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -147,4 +148,7 @@ body {
 }
 .box form .inputBox input[type="submit"]:active {
   opacity: 0.8;
+}
+footer {
+  margin-top: auto;
 }
