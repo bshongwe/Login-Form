@@ -19,6 +19,40 @@ body {
   height: 420px;
   background: #1c1c1c;
   border-radius: 8px;
+  overflow: hidden;
+}
+.box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .box form {
   position: absolute;
@@ -107,4 +141,10 @@ body {
   cursor: pointer;
   font-size: 0.9em;
   border-radius: 4px;
+  font-weight: 600;
+  width: 100;
+  margin-top: 10px;
+}
+.box form .inputBox input[type="submit"]:active {
+  opacity: 0.8;
 }
